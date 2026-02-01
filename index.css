@@ -1,0 +1,120 @@
+.arbutus-regular {
+  font-family: "Arbutus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+body {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Arbutus", sans-serif;
+}
+
+.calculator {
+    background-color: #f19d9d;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+
+    animation: slideIn 1.2s ease-out forwards;
+    transform: translateY(-1000px) rotate(-10deg);
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-1000px) rotate(-10deg);
+        opacity: 1;
+    }
+    60% {
+        transform: translateY(30px) rotate(5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+
+
+.display {
+    background-color: #f0e7c9;
+    min-height: 60px;
+    height: auto;
+    width: 240px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
+
+    transition: all 0.2s ease;
+
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.buttons {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+#screen {
+    font-size: 26px;
+    color: #444;
+    width: 100%;
+
+    display: block; 
+    overflow-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+.button {
+    width: 100%;
+    font-family: inherit;
+    font-size: 18px;
+    width: 55px;
+    height: 25px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #f8f2f2;
+    box-shadow: 6px 6px 12px #bebebe, -1px -1px 12px #ffffff;
+    color: #51a6f5;
+
+    cursor: pointer;
+}
+
+.button:active {
+    transform: translateY(2px) scale(0.92) !important;
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #f3e7e7;
+    transform: scale(0.92);
+    transition: 0.05s;
+}
+
+.button:hover {
+    color: #ffffff;
+    background: #51a6f5;
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(81, 166, 245, 0.3);
+}
+.operator:hover { background-color: #535251; color: white; }
+.equals:hover { background-color: #ff4d4d; color: white; }
+.clear:hover { background-color: #d9534f; color: white; }
+
+.operator { color: #535251; font-weight: bold; }
+.equals { color: #d9534f; font-weight: bold; }
+.clear { color: #d9534f; }
