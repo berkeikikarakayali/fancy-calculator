@@ -67,6 +67,9 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+
+    position: relative;
+    z-index: 10;
 }
 
 #screen {
@@ -102,7 +105,6 @@ body {
     transform: translateY(2px) scale(0.92) !important;
     box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #f3e7e7;
     transform: scale(0.92);
-    transition: 0.05s;
 }
 
 .button:hover {

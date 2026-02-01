@@ -52,6 +52,7 @@ function compute() {
         if (currentDisplay === "") return;
         // eval
         let result = eval(currentDisplay);
+        result = parseFloat(result.toFixed(3));
         currentDisplay = result.toString();
         updateDisplay();
 
