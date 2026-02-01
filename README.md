@@ -6,3 +6,7 @@ Tech Stack
 -CSS3: Advanced layouts
 -JavaScript: Dynamic DOM updates, error handling, and expression parsing.
 -Google Fonts: "Arbutus" font for a unique look.
+
+<p align="center">
+  <img src="assets/calculator-ss.png" alt="Fancy Calculator UI" width="350">
+</p>
